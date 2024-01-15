@@ -1,0 +1,235 @@
+﻿{% extends 'main/base.html' %}
+
+{% block content %}
+
+<main>
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators ">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner bg-info">
+    <div class="carousel-item active ">
+      <img src="media/old.jpg" class="d-block w-45"  width="600" height="600" alt="...">
+      <div class="carousel-caption d-none d-md-block ">
+        <div class="col-md-50 ">
+            <h2 class="featurette-heading fw-normal lh-2 text-dark "> Скидки для пенсионеров</h2>
+            <p class="lead text-dark">Скидки до 10%</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="media/micro.jpg" class="d-block w-30"  width="600" height="600" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h2 class="featurette-heading fw-normal lh-2 text-dark ">Точные результаты анализов</h2>
+          <p class="lead text-dark">Точность 99%</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="media/dok.jpg" class="d-block w-30"  width="600" height="600" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h2 class="featurette-heading fw-normal lh-2 text-dark ">Лучшие специалисты</h2>
+          <p class="lead text-dark">Опытные сотрудники</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Предыдущий</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Следующий</span>
+  </button>
+</div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+      <div class="container-fluid bg-info text-dark py-5">
+        <h1 class="display-5 fw-bold"> Качество и скорость </h1>
+        <p class="col-md-8 fs-4">Одна из самых качественных и лучших клиник.</p>
+<!--        <button class="btn btn-primary btn-lg" type="button">Example button</button>-->
+      </div>
+    </div>
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      {% for object in object_list %}
+          {% include 'main/includes/inc_category.html' %}
+
+      {% endfor %}
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+   <h2 class="featurette-heading ">О нас</h2>
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1"> Почему выбирают нас<span class="text-body-secondary"></span></h2>
+        <p class="lead">  Выбор медицинского центра – это ответственное и серьезное решение, которое может повлиять на ваше здоровье и благополучие. Поэтому важно выбирать такое место, где вам будет оказана качественная и профессиональная помощь. Наш медицинский центр – идеальный вариант для тех, кто ищет надежного партнера в заботе о своем здоровье. В этой статье мы расскажем, почему стоит выбрать именно нас.</p>
+      </div>
+      <div class="col-md-5">
+         <p align="center"><img class="w-70 p-2"  width="500" height="500" src="/media/cab.jpg">  </p>
+
+          <title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+          <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em"></text></svg>
+      </div>
+    </div>
+
+
+    <hr class="featurette-divider">
+            <h2 align="center" class="featurette-heading fw-normal lh-1"> Опыт и профессионализм</h2>
+        <p align="center"><img class="w-70 p-2"  width="1000" height="500" src="/media/prof.jpg">  </p>
+  <div class="row featurette">
+
+
+        <p class="lead"  align="center">  Один из главных факторов, определяющих качество медицинского центра – это опыт и профессионализм его
+          специалистов. Наш медицинский центр может похвастаться командой высококвалифицированных врачей и медицинского персонала,
+          имеющих многолетний опыт работы. Наши специалисты постоянно совершенствуют свои навыки, проходя дополнительные курсы и
+          тренинги, чтобы быть в курсе последних достижений и инноваций в медицине.</p>
+  </div>
+      <div class="col-md-5">
+
+          <title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/>
+          <text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em"></text></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+<!--        <div class="row">-->
+
+<!--&lt;!&ndash;  {% for obj in offer_list %}&ndash;&gt;-->
+<!--&lt;!&ndash;          {% include 'main/offers.html' %}&ndash;&gt;-->
+<!--&lt;!&ndash;  {% endfor %}&ndash;&gt;-->
+<!--    {% for objs in object_offer %}-->
+<!--          {% include 'main/includes/offers.html' %}-->
+
+<!--    {% endfor %}-->
+<main>
+    <div  >
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center"  >
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Полный анализ крови</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">5,000<small class="text-body-secondary fw-light"> /руб</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Результат за 2 дня</li>
+              <li>Отправка результатов на электроную почту</li>
+              <li>Расскажем о результатах</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Подробней</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Комплекс УЗИ</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">8,000<small class="text-body-secondary fw-light"> /руб</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>УЗИ малого таза</li>
+              <li>УЗИ сердца</li>
+              <li>УЗИ Брюной полости</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Подробней</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Консультация</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">от 500<small class="text-body-secondary fw-light"> /руб</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Развернутые ответы от специалиста</li>
+              <li>Консульация от опытного специалиста</li>
+              <li>Помощь в выборе лечения</li>
+
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Подробней</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</main>
+    <hr class="featurette-divider">
+  <div class="row "featurette>
+    <div  align="center">
+      <div class="col-md-4" >
+        <h2 class="featurette-heading fw-normal lh-10" align="center"> Современное оборудование <span class="text-body-secondary"></span></h2>
+        <p class="lead" align="center"> Медицинская техника и оборудование играют ключевую роль в диагностике и
+          лечении различных заболеваний. Наш медицинский центр оснащен современным оборудованием, которое позволяет
+          проводить точные и надежные исследования.</p>
+      </div>
+    <div class="col-md-75">
+         <p align="center"><img class="w-70 p-2"  width="1000" height="700" src="/media/kab.jpg">  </p>
+    </div>
+  </div>
+  </div>
+    <hr class="featurette-divider">
+
+  <div class="album py-20 bg-body-tertiary">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+                       <p align="center"><img class="w-70 p-2"  width="200" height="350" src="/media/pho.jpg">  </p>
+            <div class="card-body">
+              <p class="featurette-heading fw-normal lh-1" align="center" >Ст. Кардиолог Иванов В.А</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <p align="center"><img class="w-70 p-2"  width="200" height="350" src="/media/pho.jpg">  </p>
+            <div class="card-body">
+              <p class="featurette-heading fw-normal lh-1" align="center" >Ст. Ортапед  Сергеев С.В</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <p align="center"><img class="w-70 p-2"  width="200" height="350" src="/media/pho.jpg">  </p>
+            <div class="card-body">
+              <p class="featurette-heading fw-normal lh-1" align="center" >Ст. Хирург  Антонов А.Р</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+<hr class="featurette-divider">
+
+
+
+{% endblock %}
