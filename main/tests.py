@@ -1,6 +1,4 @@
-from django.test import TestCase, Client
-from django.urls import reverse
-from main import models
+from django.test import TestCase
 from main.models import Category
 from users.views import Register
 
@@ -12,11 +10,6 @@ class TestModels(TestCase):
             name='Name1'
         )
 
-    def test_home_page(self):
-        category1 = Category.objects.create(
-            name='dev'
-        )
-
 
 class TestRegisterViews(TestCase):
 
@@ -26,10 +19,6 @@ class TestRegisterViews(TestCase):
             password='123456'
         )
 
-
-
     def test_register(self):
-        user = Register(
-            username='test@test'
-        )
-
+        self.user = Register(
+            username='test@test')

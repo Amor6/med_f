@@ -20,11 +20,9 @@ def contacts(request):
 
 
 def category_main(request, pk):
-    category_item= Services.objects.get(pk=pk)
+    category_item = Category.objects.get(pk=pk)
     context = {
         'object_l': Services.objects.filter(category_id=pk),
-        'title': f'Услуга {category_item.name}'
+        'title': f'Услуги {category_item.name}'
     }
-    return render(request, 'main/includes/inc_category.html', context)
-
-
+    return render(request, 'main/includes/serv.html', context)
