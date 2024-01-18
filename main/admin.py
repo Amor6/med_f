@@ -10,4 +10,4 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Services)
 class ServicesAdmin(admin.ModelAdmin):
-    list_display = ('name_serv', 'category',)
+    list_display = ('name_serv', 'category', 'pk',)

@@ -7,12 +7,15 @@
 
       <div class="p-5 mb-4 bg-body-tertiary rounded-3">
       <div class="container-fluid bg-info text-dark py-5">
-        <h1 class="display-5 fw-bold">{{ title }}</h1>
+        <h1 class="display-5 fw-bold">{{ title_l }}</h1>
       </div>
     </div>
     </div>
-    <p class="p-5 mb-4 display-6 fw-bold"></p>
+    <p class="p-5 mb-4 display-6 fw-bold">{{ description }}</p>
     </div>
+    <p class="p-5 mb-4 display-6 fw-bold">Доступные услуги: {{ object_l }}.</p>
+    <p class="p-5 mb-4 display-6 fw-bold">Цена услуги: {{ pay }} рублей.</p>
+    <p class="p-5 mb-4 display-6 fw-bold">Описание услуги: {{ serv_description }}.</p>
 
       <hr class="featurette-divider">
 

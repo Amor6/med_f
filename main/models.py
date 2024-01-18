@@ -19,7 +19,6 @@ class Category(models.Model):
 class Services(models.Model):
     name_serv = models.CharField(max_length=100, verbose_name='Название')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
-    phot = models.ImageField(upload_to='serv/', **NULLABLE, verbose_name='Фото')
     price = models.IntegerField(verbose_name='Цена')
     serv_description = models.TextField(max_length=400, verbose_name='Описание услуги')
 
